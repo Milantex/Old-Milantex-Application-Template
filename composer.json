@@ -1,0 +1,23 @@
+{
+    "name": "milantex/old-milantex-app",
+    "description": "This is an old application template that I no longer use, but is fine for very very small applications and for quick demos.",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Milan Tair",
+            "email": "mtair@singidunum.ac.rs"
+        }
+    ],
+    "require": {
+        "milantex/daw": "^1.0",
+        "milantex/old-milantex-core": "^0.1.1"
+    },
+    "config": {
+        "vendor-dir": "private/vendor"
+    },
+    "autoload": {
+        "psr-4": {
+            "Application\\" : "private/application"
+        }
+    }
+}

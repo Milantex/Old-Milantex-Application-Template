@@ -1,0 +1,12 @@
+# Ne dozvoli listanje sadrzaja direktorijuma
+Options All -Indexes
+
+# Aktiviraj modul rewrite (mora da bude ukljucen na Apache2 serveru)
+RewriteEngine On
+
+# Ako ne postoji datoteka ili direktorijum na trazenoj putanji, nastavi dalje
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Sve od pocetka do kraja URL-a prosledi kao URL GET argument index.php datoteci
+RewriteRule ^(.*)$ ./index.php?URL=$1 [L]

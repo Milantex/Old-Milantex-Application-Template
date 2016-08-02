@@ -1,0 +1,28 @@
+<?php
+use Old\Milantex\Core\ConfigurationInterface;
+
+final class ApplicationConfiguration implements ConfigurationInterface {
+    public static function getDatabaseHostname(): string {
+        return '{{DB_HOSTNAME}}';
+    }
+
+    public static function getDatabaseUsername(): string {
+        return '{{DB_USERNAME}}';
+    }
+
+    public static function getDatabasePassword(): string {
+        return '{{DB_PASSWORD}}';
+    }
+
+    public static function getDatabaseName(): string {
+        return '{{DB_BASENAME}}';
+    }
+
+    public static function getWebsiteBaseUrl(): string {
+        return '{{BASE_URL}}';
+    }
+
+    public static function getTemplatesFilesystemPath(): string {
+        return '../private/application/templates/';
+    }
+}
